@@ -1,0 +1,89 @@
+* {
+    box-sizing: border-box;
+}
+
+html, body {
+    height: 100%;
+}
+
+body {
+    padding: 0;
+    margin: 0;
+    font-family: 'Amatic SC', cursive;
+    background-color: #9a77cf;
+    cursor: url(../assets/hammer1.png), auto;
+}
+
+body:active {
+    cursor: url(../assets/hammer2.png), auto;
+}
+
+h1 {
+    user-select: none;
+    margin: 0;
+    text-align: center;
+    font-size: 100px;
+}
+
+.container {
+    width: 50%;
+    margin: auto;
+}
+
+.row {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.ground {
+    position: relative;
+    height: 200px;
+    width: 200px;
+    margin: auto;
+    overflow: hidden;
+}
+
+.ground::after {
+    content: '';
+    position: absolute;
+    bottom: -28px;
+    width: 100%;
+    height: 100px;
+    background-image: url('../assets/dirt.png');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+
+.object {
+    position: absolute;
+    bottom: -100px;
+    left: 50%;
+    transform: translate(-50%);
+    height: 140px;
+    width: 140px;
+    background-image: url('../assets/head1.png');
+    background-repeat: no-repeat;
+    background-size: contain;
+    transition: .5s;
+}
+
+.object.show {
+    bottom: 40px;
+}
+
+.score {
+    position: absolute;
+    left: 50%;
+    bottom: 20px;
+    transform: translate(-50%);
+    background-color: #b288f1;
+    padding: 20px 40px;
+    border-radius: 20px;
+    box-shadow: 0 0 15px rgba(255, 255, 255, 0.5);
+}
+
+.score h1 {
+    font-size: 40px;
+    font-family: sans-serif;
+}
