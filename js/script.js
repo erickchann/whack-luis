@@ -7,6 +7,8 @@ let score = 0;
 let last;
 
 function init() {
+    score = 0;
+    scr.innerHTML = `Score: ${score}`;
     playBtn.innerHTML = 'Restart';
     let gameInterval = setInterval(() => {
         let rand = ~~(Math.random() * (grounds.length - 1));
